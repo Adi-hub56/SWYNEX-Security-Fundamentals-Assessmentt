@@ -1,0 +1,1 @@
+# SWYNEX-Security-Fundamentals-Assessmentt
