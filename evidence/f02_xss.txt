@@ -1,0 +1,2 @@
+$ curl -s -G http://127.0.0.1:5000/search --data-urlencode 'q=<script>alert(1)</script>'
+<html><body><h1>Results for: <script>alert(1)</script></h1></body></html>

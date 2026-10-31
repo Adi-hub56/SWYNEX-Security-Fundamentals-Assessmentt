@@ -1,0 +1,26 @@
+### Retest against patched app (port 5001)
+F-01 SQLi payload:
+HTTP/1.1 401 UNAUTHORIZED
+Invalid credentials
+F-02 XSS payload:
+<html><body><h1>Results for: &lt;script&gt;alert(1)&lt;/script&gt;</h1></body></html>
+F-03 unauthenticated /note/1:
+HTTP 401
+F-04 /debug:
+HTTP 404
+F-06 malformed input:
+HTTP/1.1 401 UNAUTHORIZED
+Invalid credentials
+F-07 brute force:
+attempt 1: HTTP 401
+attempt 2: HTTP 401
+attempt 3: HTTP 401
+attempt 4: HTTP 429
+attempt 5: HTTP 429
+attempt 6: HTTP 429
+attempt 7: HTTP 429
+attempt 8: HTTP 429
+F-08 headers:
+Content-Security-Policy: default-src 'self'
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY

@@ -1,0 +1,7 @@
+### Requests made with NO login or session cookie
+$ curl -s http://127.0.0.1:5000/note/1
+{"body":"Admin note: backup key is K-9921","id":1,"owner_id":1}
+$ curl -s http://127.0.0.1:5000/note/2
+{"body":"Alice private note","id":2,"owner_id":2}
+$ curl -s http://127.0.0.1:5000/note/3
+{"body":"Bob private note","id":3,"owner_id":3}

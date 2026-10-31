@@ -1,0 +1,8 @@
+$ curl -s -I 'http://127.0.0.1:5000/search?q=x'
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.7 Python/3.12.3
+Date: Sat, 31 Oct 2026 13:34:31 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 49
+Connection: close
+

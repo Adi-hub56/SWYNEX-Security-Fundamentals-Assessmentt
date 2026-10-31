@@ -1,0 +1,13 @@
+### 10 consecutive wrong passwords for admin
+attempt 1: HTTP 401
+attempt 2: HTTP 401
+attempt 3: HTTP 401
+attempt 4: HTTP 401
+attempt 5: HTTP 401
+attempt 6: HTTP 401
+attempt 7: HTTP 401
+attempt 8: HTTP 401
+attempt 9: HTTP 401
+attempt 10: HTTP 401
+### attempt 11 with correct password
+Welcome admin (role=admin)
